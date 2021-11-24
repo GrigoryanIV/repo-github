@@ -1,0 +1,21 @@
+#Вывод введённого числа в сумме n + nn + nnn
+n = 0
+n_sm = 0
+
+s_short = input("Введите целое неотрицательное число: ")
+n_short = int(s_short)
+
+def udl(n, s_short):
+ s_long = ""
+ while n > 0:
+  n = n - 1
+  s_long = s_long + s_short
+ return int(s_long)
+
+while n < 3:
+ n = n + 1
+ n_short_1 = udl(n, s_short)
+ n_sm = n_sm + n_short_1
+
+print("Получите результат - {}".format(n_sm))
+
