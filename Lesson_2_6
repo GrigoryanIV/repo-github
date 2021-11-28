@@ -1,0 +1,61 @@
+#Реализовать структуру данных «Товары»
+m = 0
+c = False
+
+struc_tov = []
+lst_temp1 = []
+lst_temp2 = []
+lst_temp3 = []
+lst_temp4 = []
+
+def proverka(n_str):
+    if n_str.isdigit():
+        n = float(n_str)
+        return n
+    else:
+        print("Введите числовое значение")
+        return 0
+
+
+while c == False:
+    m = m + 1
+    tov = input("Введите наименование товара: ")
+
+    while 1 == 1:
+        cena_str = input("Введите цену товара: ")
+        cena = proverka(cena_str)
+        if cena > 0:
+            break
+
+    while 1 == 1:
+        kol_str = input("Введите количество товара: ")
+        kol = proverka(kol_str)
+        if kol > 0:
+            break
+
+    ed_str = input("Введите единицу измерения товара: ")
+    end_str = input("Продолжить ввод данных (любой символ - да/пробел - нет): ")
+
+    if end_str == " ":
+       c = True
+    lst_tov = {"наименование":tov, "цена":cena, "количество":kol, "ед изм":ed_str}
+    tt_tov = (m, lst_tov)
+    struc_tov.append(tt_tov)
+
+
+#Создание словарей
+for a in struc_tov:
+    lst_temp1.append(a[1]["наименование"])
+    lst_temp2.append(a[1]["цена"])
+    lst_temp3.append(a[1]["количество"])
+    lst_temp4.append(a[1]["ед изм"])
+
+lst_temp1 = list(set(lst_temp1))
+lst_temp2 = list(set(lst_temp2))
+lst_temp3 = list(set(lst_temp3))
+lst_temp4 = list(set(lst_temp4))
+
+print(f"Список всех товаров: - {lst_temp1} ")
+print(f"Список всех цен: - {lst_temp2} ")
+print(f"Список всех количеств: - {lst_temp3} ")
+print(f"Список всех единиц: - {lst_temp4} ")
