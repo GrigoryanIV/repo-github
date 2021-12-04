@@ -1,0 +1,35 @@
+#Времена года
+m = 0
+c = False
+
+while c == False:
+    my_month = input("Введите число от 1 до 12: ")
+
+    if my_month.isdigit():
+        my_month = int(my_month)
+        if my_month >= 1 and my_month <= 12:
+            c = True
+        else:
+            print("Введённое значение должно принадлежать диапазону от 1 до 12")
+    else:
+        print("Введённое значение должно быть целым числом ")
+
+#способ через словарь
+my_dict = dict([(1,"зима"),(2,"зима"),(3,"весна"),(4,"весна"),(5,"весна"),(6,"лето"),(7,"лето"),(8,"лето"),(9,"осень"),(10,"осень"),(11,"осень"),(12,"зима")])
+print(f"Введёное число {my_month} - это {my_dict[my_month]} ")
+
+#способ через список
+my_list = [(12,1,2),(3,4,5),(6,7,8),(9,10,11)]
+for a in my_list:
+    if a.count(my_month) == 1:
+        b = my_list.index(a) + 1
+
+if b == 1:
+    sezon = "ЗИМА"
+elif b == 2:
+    sezon = "ВЕСНА"
+elif b == 3:
+    sezon = "ЛЕТО"
+elif b == 4:
+    sezon = "ОСЕНЬ"
+print(f"Введёное число {my_month} - это {sezon} ")
