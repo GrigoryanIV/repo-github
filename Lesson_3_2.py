@@ -12,3 +12,4 @@ email = input("Введите email: ")
 phone = input("Введите телефон: ")
 
 print(f"Итоговый результат: - {concatination (name,surname,year,city,email,phone )} ")
+

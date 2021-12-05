@@ -27,7 +27,4 @@ def chislo(str_1, num=1):
     try:
       return float(str_1)
     except:
-      return None
- 
-    
-    
+      return None    

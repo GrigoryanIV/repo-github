@@ -16,3 +16,4 @@ txt = str_x.split()
 str_text = int_func_text(txt)
 my_text = " ".join(str_text)
 print(f"Итоговый результат: - {my_text} ")
+
