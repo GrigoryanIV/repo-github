@@ -1,11 +1,16 @@
 # Программа запрашивает у пользователя строку чисел, разделенных пробелом.
 d = 0
+theend = False
+
 def my_func (str_x):
     m = 0
     lst_d = str_x.split()
     n = len(lst_d)
     while m < n:
-        lst_d[m] = int(lst_d[m])
+        if lst_d[m].isdigit():
+            lst_d[m] = int(lst_d[m])
+        else:
+            lst_d[m] = 0
         m = m + 1
     return lst_d
 
@@ -20,11 +25,19 @@ def my_func_1 (lst_x):
     return d
 
 
-while True:
+while theend == False:
 
-    str_x = input("Введите строку чисел, разделённых пробелом: ")
-    if str_x == "*":
-        break
+    str_1 = input("Введите строку чисел, разделённых пробелом: ")
+    if str_1.count("*") > 0:
+        if str_1.index("*") == 0:
+            break
+        else:
+            str_x = str_1.replace("*","")
+            theend = True
+    else:
+        str_x = str_1
+
+    
     lst_x = my_func(str_x)
     d = d + my_func_1(lst_x)
     print(f"Итоговый результат: - {d} ")
