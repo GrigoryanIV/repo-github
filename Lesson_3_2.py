@@ -4,7 +4,6 @@ def concatination (name,surname,year,city,email,phone ):
     a = name + " " + surname + " " + year + " " + city + " " + email + " " + phone
     return a
 
-
 name = input("Введите имя: ")
 surname = input("Введите фамилию: ")
 year = input("Введите год рождения: ")
