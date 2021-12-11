@@ -24,7 +24,6 @@ def my_func_1 (lst_x):
 
     return d
 
-
 while theend == False:
 
     str_1 = input("Введите строку чисел, разделённых пробелом: ")
