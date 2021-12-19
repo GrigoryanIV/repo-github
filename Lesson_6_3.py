@@ -15,7 +15,7 @@ class Position(Worker):
     return f"{self.name} {self.surname}"
   
   def zp(self):
-    return(self._income["wage"] + self._income["bonu"])
+    return(self._income["wage"] + self._income["bonus"])
   
   
 my_stuff = Position("Теодор", "Рузвельт", "Кладовщик", 10000, 2000)

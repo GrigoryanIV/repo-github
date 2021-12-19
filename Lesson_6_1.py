@@ -12,7 +12,7 @@ class TrafficLight:
     while True:
      print(self.colors[n])
      sleep(self.time_sec[n])
-     n=+1
+     n+=1
      if n == 3:
        n = 0
 
