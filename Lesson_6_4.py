@@ -1,6 +1,6 @@
 # Реализуйте базовый класс Car
 
-class Car:
+class Cars:
   
   def __init__(self, speed, color, name, is_police):
     self.speed = speed
