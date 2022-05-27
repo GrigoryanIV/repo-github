@@ -1,6 +1,0 @@
-#Вывести каждое слово с новой строки.
-mystr = input("Введите набор символов: ")
-lst_my = mystr.split()
-print("Список после преобразования текста: ")
-for n , el in enumerate(lst_my, 1):
-    print(f"    {n}  -   {el[:10]} ")
